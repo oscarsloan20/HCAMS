@@ -1,5 +1,3 @@
-// This is the "Patient" class which will
-
 package com.example.backend.model;
 
 import org.springframework.data.annotation.Id;
