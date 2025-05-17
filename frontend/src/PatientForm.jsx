@@ -39,6 +39,31 @@ function PatientForm() {
     }
   };
 
+const generateTimeOptions = () => {
+  const options = [];
+  let hour = 9;
+  let minute = 0;
+
+  while (hour < 17 || (hour === 17 && minute === 0)) {
+    const hh = String(hour).padStart(2, "0");
+    const mm = String(minute).padStart(2, "0");
+    options.push(
+      <option key={`${hh}:${mm}`} value={`${hh}:${mm}`}>
+        {`${hh}:${mm}`}
+      </option>
+    );
+
+    minute += 15;
+    if (minute === 60) {
+      minute = 0;
+      hour++;
+    }
+  }
+
+  return options;
+};
+
+
   return (
     <form onSubmit={handleSubmit} style={styles.form}>
       <h2>Book an Appointment</h2>
@@ -68,30 +93,46 @@ function PatientForm() {
         onChange={handleChange}
         required />
       <input
-        name="postcode" placeholder="Postcode" value={formData.postcode} onChange={handleChange} required />
-      <textarea
+        name="postcode"
+        placeholder="Postcode"
+        value={formData.postcode}
+        onChange={handleChange}
+        required />
+      <select
         name="appointmentReasoning"
         placeholder="Reason for Appointment"
         value={formData.appointmentReasoning}
         onChange={handleChange}
-        required />
+        required>
+        <option value="">-- Select Reason --</option>
+        <option value="Cardiology">Cardiology</option>
+        <option value="Dermatology">Dermatology</option>
+        <option value="Neurological">Neurological</option>
+        <option value="Orthopedics">Orthopedics</option>
+        <option value="Pathology">Pathology</option>
+        <option value="Pediatric">Pediatric</option>
+        <option value="Psychiatry">Psychiatry</option>
+        <option value="Unsure">Unsure</option>
+      </select>
       <input 
         name="date" 
         type="date" 
         value={formData.date}
         onChange={handleChange} 
         required />
-      <input 
-        name="time"
-        type="time"
-        step="900"  // 900 seconds = 15 minutes, allowing 15 minute intervals between each time
-        value={formData.time}
-        onChange={handleChange}
-        required/>
-      <button type="submit">Submit</button>
+<select
+  name="time"
+  value={formData.time}
+  onChange={handleChange}
+  required
+>
+  <option value="">-- Select Time --</option>
+  {generateTimeOptions()}
+</select>
+       <button type="submit">Submit</button>
     </form>
   );
-}
+  }
 
 const styles = {
   form: {
