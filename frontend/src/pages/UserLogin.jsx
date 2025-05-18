@@ -1,63 +1,25 @@
-import React, { useState } from "react";
-import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
-function Login() {
-  const [formData, setFormData] = useState({ email: "", password: "" });
+const Login = () => {
+  const navigate = useNavigate();
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
+  const handleLogin = async () => {
+    // send login details to backend
+    const res = await axios.post("/api/login", { email, password });
+    const { token, role } = res.data;
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const res = await axios.post("http://localhost:8080/api/login", formData);
-      alert("Login successful: " + res.data.message);
-      localStorage.setItem("token", res.data.token);
-      window.location.href = "/dashboard";
-    } catch (err) {
-      alert("Login failed. Check credentials.");
-      console.error(err);
+    localStorage.setItem("token", token);
+    localStorage.setItem("role", role);
+
+    // redirect based on role
+    if (role === "PATIENT") {
+      navigate("/dashboard/patient");
+    } else if (role === "DOCTOR") {
+      navigate("/dashboard/doctor");
     }
   };
 
   return (
-    <form onSubmit={handleSubmit} style={styles.form}>
-      <h2>Login</h2>
-      <input
-        name="email"
-        type="email"
-        placeholder="Email"
-        value={formData.email}
-        onChange={handleChange}
-        required
-      />
-      <input
-        name="password"
-        type="password"
-        placeholder="Password"
-        value={formData.password}
-        onChange={handleChange}
-        required
-      />
-      <button type="submit">Log In</button>
-    </form>
+    // login form here
   );
-}
-
-const styles = {
-  form: {
-    maxWidth: "400px",
-    margin: "auto",
-    padding: "1rem",
-    display: "flex",
-    flexDirection: "column",
-    gap: "0.75rem",
-    backgroundColor: "#f5f5f5",
-    borderRadius: "8px",
-    boxShadow: "0 0 10px rgba(0,0,0,0.1)",
-  }
 };
-
-export default Login;
