@@ -1,0 +1,42 @@
+[
+  {
+    "_id": "appointment1",
+    "patientId": "patient1",
+    "doctorId": "doctor1",
+    "appointmentReasoning": "Cardiology",
+    "date": "2025-05-18",
+    "time": "12:30"
+  },
+  {
+    "_id": "appointment2",
+    "patientId": "patient2",
+    "doctorId": "doctor2",
+    "appointmentReasoning": "Dermatology",
+    "date": "2025-05-19",
+    "time": "13:00"
+  },
+  {
+    "_id": "appointment3",
+    "patientId": "patient3",
+    "doctorId": "doctor3",
+    "appointmentReasoning": "Neurological",
+    "date": "2025-05-20",
+    "time": "14:45"
+  },
+  {
+    "_id": "appointment4",
+    "patientId": "patient4",
+    "doctorId": "doctor4",
+    "appointmentReasoning": "Orthopedics",
+    "date": "2025-05-21",
+    "time": "13:15"
+  },
+  {
+    "_id": "appointment5",
+    "patientId": "patient5",
+    "doctorId": "doctor5",
+    "appointmentReasoning": "Pathology",
+    "date": "2025-05-22",
+    "time": "14:15"
+  }
+]

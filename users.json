@@ -1,0 +1,82 @@
+[
+  {
+    "_id": "user_patient1",
+    "email": "patient1@example.com",
+    "password": "password123",
+    "role": "PATIENT",
+    "patientId": "patient1",
+    "doctorId": null
+  },
+  {
+    "_id": "user_doctor1",
+    "email": "doctor1@example.com",
+    "password": "password123",
+    "role": "DOCTOR",
+    "patientId": null,
+    "doctorId": "doctor1"
+  },
+  {
+    "_id": "user_patient2",
+    "email": "patient2@example.com",
+    "password": "password123",
+    "role": "PATIENT",
+    "patientId": "patient2",
+    "doctorId": null
+  },
+  {
+    "_id": "user_doctor2",
+    "email": "doctor2@example.com",
+    "password": "password123",
+    "role": "DOCTOR",
+    "patientId": null,
+    "doctorId": "doctor2"
+  },
+  {
+    "_id": "user_patient3",
+    "email": "patient3@example.com",
+    "password": "password123",
+    "role": "PATIENT",
+    "patientId": "patient3",
+    "doctorId": null
+  },
+  {
+    "_id": "user_doctor3",
+    "email": "doctor3@example.com",
+    "password": "password123",
+    "role": "DOCTOR",
+    "patientId": null,
+    "doctorId": "doctor3"
+  },
+  {
+    "_id": "user_patient4",
+    "email": "patient4@example.com",
+    "password": "password123",
+    "role": "PATIENT",
+    "patientId": "patient4",
+    "doctorId": null
+  },
+  {
+    "_id": "user_doctor4",
+    "email": "doctor4@example.com",
+    "password": "password123",
+    "role": "DOCTOR",
+    "patientId": null,
+    "doctorId": "doctor4"
+  },
+  {
+    "_id": "user_patient5",
+    "email": "patient5@example.com",
+    "password": "password123",
+    "role": "PATIENT",
+    "patientId": "patient5",
+    "doctorId": null
+  },
+  {
+    "_id": "user_doctor5",
+    "email": "doctor5@example.com",
+    "password": "password123",
+    "role": "DOCTOR",
+    "patientId": null,
+    "doctorId": "doctor5"
+  }
+]

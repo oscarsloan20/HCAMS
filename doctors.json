@@ -1,0 +1,67 @@
+[
+  {
+    "_id": "doctor1",
+    "name": "Alan Cooper",
+    "email": "doctor1@example.com",
+    "specialisation": "Cardiology",
+    "workingHours": {
+      "monday": "09:00-17:00",
+      "tuesday": "09:00-17:00",
+      "wednesday": "09:00-17:00",
+      "thursday": "09:00-17:00",
+      "friday": "09:00-17:00"
+    }
+  },
+  {
+    "_id": "doctor2",
+    "name": "William Murphy",
+    "email": "doctor2@example.com",
+    "specialisation": "Dermatology",
+    "workingHours": {
+      "monday": "09:00-17:00",
+      "tuesday": "09:00-17:00",
+      "wednesday": "09:00-17:00",
+      "thursday": "09:00-17:00",
+      "friday": "09:00-17:00"
+    }
+  },
+  {
+    "_id": "doctor3",
+    "name": "Chelsea Thomas",
+    "email": "doctor3@example.com",
+    "specialisation": "Neurological",
+    "workingHours": {
+      "monday": "09:00-17:00",
+      "tuesday": "09:00-17:00",
+      "wednesday": "09:00-17:00",
+      "thursday": "09:00-17:00",
+      "friday": "09:00-17:00"
+    }
+  },
+  {
+    "_id": "doctor4",
+    "name": "Janice Metcalfe",
+    "email": "doctor4@example.com",
+    "specialisation": "Orthopedics",
+    "workingHours": {
+      "monday": "09:00-17:00",
+      "tuesday": "09:00-17:00",
+      "wednesday": "09:00-17:00",
+      "thursday": "09:00-17:00",
+      "friday": "09:00-17:00"
+    }
+  },
+  {
+    "_id": "doctor5",
+    "name": "Dominic Smith",
+    "email": "doctor5@example.com",
+    "specialisation": "Pathology",
+    "workingHours": {
+      "monday": "09:00-17:00",
+      "tuesday": "09:00-17:00",
+      "wednesday": "09:00-17:00",
+      "thursday": "09:00-17:00",
+      "friday": "09:00-17:00"
+    }
+  }
+]

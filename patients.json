@@ -1,0 +1,42 @@
+[
+  {
+    "_id": "patient1",
+    "name": "Danny Owen",
+    "email": "patient1@example.com",
+    "phone": "(0151)4960996",
+    "address": "Flat 19E\nBenjamin grove",
+    "postcode": "W0 6EA"
+  },
+  {
+    "_id": "patient2",
+    "name": "Phillip Watkins",
+    "email": "patient2@example.com",
+    "phone": "+44(0)161 496 0171",
+    "address": "Flat 8\nJake springs",
+    "postcode": "W97 6GD"
+  },
+  {
+    "_id": "patient3",
+    "name": "Lee Brown",
+    "email": "patient3@example.com",
+    "phone": "01314960064",
+    "address": "Studio 19S\nSheppard villages",
+    "postcode": "E0E 0QG"
+  },
+  {
+    "_id": "patient4",
+    "name": "Georgina Schofield",
+    "email": "patient4@example.com",
+    "phone": "020 74960327",
+    "address": "Flat 63a\nAntony prairie",
+    "postcode": "B9 0XP"
+  },
+  {
+    "_id": "patient5",
+    "name": "Sheila Schofield-Walker",
+    "email": "patient5@example.com",
+    "phone": "+443069990700",
+    "address": "Flat 5\nDixon throughway",
+    "postcode": "CR2X 4WS"
+  }
+]
