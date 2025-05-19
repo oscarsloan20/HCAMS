@@ -17,9 +17,9 @@ public class UserController {
     private UserRepository userRepository;
 
     @PostMapping("/login")
-    public ResponseEntity<?> login(@RequestBody Map<String, String> credentials) {
-        String email = credentials.get("email");
-        String password = credentials.get("password");
+    public ResponseEntity<?> login(@RequestBody Map<String, String> loginData) {
+        String email = loginData.get("email");
+        String password = loginData.get("password");
 
         Optional<User> userOpt = userRepository.findByEmail(email);
         if (userOpt.isEmpty()) {
@@ -28,7 +28,6 @@ public class UserController {
 
         User user = userOpt.get();
 
-        // Add real password hashing check here
         if (!user.getPassword().equals(password)) {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid password");
         }
