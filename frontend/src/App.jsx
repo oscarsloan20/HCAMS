@@ -7,16 +7,22 @@ import Login from "./pages/UserLogin";
 import Signup from "./pages/Signup";
 import PatientDashboard from "./pages/PatientDashboard";
 import DoctorDashboard from "./pages/DoctorDashboard";
+import BookAppointment from "./pages/BookAppointment";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
   return (
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/book" element={<BookAppointment />} />
+        <Route path="/" element={<Home />} />        
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/book" element={ 
+        <ProtectedRoute>
         <Route path="/appointments" element={<ViewAppointments />} />
-        <Route path="/login" element={<Login />} />
+        </ProtectedRoute>
+        } />
+        
         <Route path="/signup" element={<Signup />} />
         <Route path="/dashboard/patient" element={<PatientDashboard />} />
         <Route path="/dashboard/doctor" element={<DoctorDashboard />} />
