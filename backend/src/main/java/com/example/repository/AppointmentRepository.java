@@ -18,3 +18,4 @@ public interface AppointmentRepository extends MongoRepository<Appointment, Stri
     // Check for scheduling conflicts
     boolean existsByDoctorIdAndDateAndTime(String doctorId, String date, String time);
 }
+
