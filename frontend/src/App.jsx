@@ -7,7 +7,6 @@ import Login from "./pages/UserLogin";
 import Signup from "./pages/Signup";
 import PatientDashboard from "./pages/PatientDashboard";
 import DoctorDashboard from "./pages/DoctorDashboard";
-import BookAppointment from "./pages/BookAppointment";
 import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
@@ -16,7 +15,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />        
-        <Route path="/login" element={<LoginPage />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/book" element={ 
         <ProtectedRoute>
         <Route path="/appointments" element={<ViewAppointments />} />
